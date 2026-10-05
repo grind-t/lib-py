@@ -1,0 +1,54 @@
+[project]
+name = "grind-t-lib"
+version = "0.1.0"
+description = "Add your description here"
+license = "ISC"
+authors = [
+    { name = "grind-t", email = "grindt.gd@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/grind-t/lib-py"
+Issues = "https://github.com/grind-t/lib-py/issues"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "lib"
+
+[tool.ruff.lint]
+select = [
+    "E", "F", "I", "UP", "B", "SIM", "RUF", "PT", "N",
+    "C4", "PIE", "PERF", "FURB", "PTH", "T20", "ANN", "ASYNC", "DTZ",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["ANN"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["--import-mode=importlib", "--strict-markers", "--strict-config", "-ra"]
+xfail_strict = true
+filterwarnings = ["error"]
+
+[tool.poe.tasks]
+fmt = "ruff format"
+lint = "ruff check"
+lint-fix = "ruff check --fix"
+typecheck = "ty check"
+test = "pytest"
+test-unit = "pytest tests/unit"
+test-e2e = "pytest tests/e2e"
+build = "uv build"
+
+[dependency-groups]
+dev = [
+    "poethepoet",
+    "pytest",
+    "ruff",
+    "ty",
+]
