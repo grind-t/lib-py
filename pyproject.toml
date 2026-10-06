@@ -37,13 +37,13 @@ filterwarnings = ["error"]
 
 [tool.poe.tasks]
 fmt = "ruff format"
-lint = "ruff check"
-lint-fix = "ruff check --fix"
+lint = [{ cmd = "ruff check" }, { cmd = "lint-imports" }]
 typecheck = "ty check"
+test-unit = "pytest tests/core tests/usecases"
+test-integration = "pytest tests --ignore=tests/core --ignore=tests/usecases"
 test = "pytest"
 build = "uv build"
-lint-imports = "lint-imports"
-check = ["lint", "typecheck", "lint-imports", "test"]
+check = ["lint", "typecheck", "test-unit"]
 
 [dependency-groups]
 dev = [
