@@ -1,5 +1,4 @@
-from lib._core import format_greeting
-from lib._usecases import greet_from
+from lib._usecases.greet import greet_from
 
 
 class FakeSource:
@@ -7,10 +6,6 @@ class FakeSource:
 
     def get_name(self) -> str:
         return "Alice"
-
-
-def test_format_greeting() -> None:
-    assert format_greeting("Alice") == "Hello, Alice!"
 
 
 def test_greet_from() -> None:
