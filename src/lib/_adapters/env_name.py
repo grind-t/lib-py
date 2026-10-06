@@ -1,8 +1,6 @@
 import os
 
 
-class EnvName:
+def env_name() -> str:
     """Name from the ``LIB_NAME`` environment variable."""
-
-    def get_name(self) -> str:
-        return os.environ.get("LIB_NAME", "World")
+    return os.environ.get("LIB_NAME", "World")

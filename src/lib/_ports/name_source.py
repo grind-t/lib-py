@@ -1,5 +1,3 @@
-from typing import Protocol
+from collections.abc import Callable
 
-
-class NameSource(Protocol):
-    def get_name(self) -> str: ...
+type NameSource = Callable[[], str]
