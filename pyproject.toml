@@ -25,6 +25,7 @@ select = [
     "E", "F", "I", "UP", "B", "SIM", "RUF", "PT", "N",
     "C4", "PIE", "PERF", "FURB", "PTH", "T20", "ANN", "ASYNC", "DTZ",
 ]
+ignore = ["RUF001"]  # allow Cyrillic in strings
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["ANN"]
