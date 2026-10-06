@@ -38,7 +38,11 @@ filterwarnings = ["error"]
 
 [tool.poe.tasks]
 fmt = "ruff format"
-lint = [{ cmd = "ruff check" }, { cmd = "lint-imports" }]
+lint = [
+    { cmd = "ruff check" },
+    { cmd = "lint-imports" },
+    { cmd = "lint-rules src" },
+]
 typecheck = "ty check"
 test-unit = "pytest tests/core tests/usecases"
 test-integration = "pytest tests --ignore=tests/core --ignore=tests/usecases"
@@ -48,6 +52,7 @@ check = ["lint", "typecheck", "test-unit"]
 
 [dependency-groups]
 dev = [
+    "grind-t-lint-rules>=0.1.0",
     "import-linter",
     "poethepoet",
     "pytest",
