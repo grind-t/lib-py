@@ -65,15 +65,15 @@ include_external_packages = true
 name = "Layers: dependencies point inward only"
 type = "layers"
 layers = [
-    "lib._compose",
-    "lib._adapters | lib._service",
+    "lib._wiring",
+    "lib._adapters | lib._usecases",
     "lib._ports",
     "lib._core",
 ]
 
 [[tool.importlinter.contracts]]
-name = "Core, ports and service do no I/O"
+name = "Core, ports and use cases do no I/O"
 type = "forbidden"
-source_modules = ["lib._core", "lib._ports", "lib._service"]
+source_modules = ["lib._core", "lib._ports", "lib._usecases"]
 # also add adapters' third-party dependencies here (httpx, etc.)
 forbidden_modules = ["os", "io", "pathlib", "socket", "subprocess"]

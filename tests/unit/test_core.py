@@ -1,5 +1,5 @@
 from lib._core import format_greeting
-from lib._service import greet_from
+from lib._usecases import greet_from
 
 
 class FakeSource:

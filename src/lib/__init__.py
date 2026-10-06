@@ -1,3 +1,3 @@
-from lib._compose import greet
+from lib._wiring import greet
 
 __all__ = ["greet"]

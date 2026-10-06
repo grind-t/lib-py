@@ -1,5 +1,5 @@
 from lib._adapters import EnvName
-from lib._service import greet_from
+from lib._usecases import greet_from
 
 
 def greet() -> str:
