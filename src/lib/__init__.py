@@ -1,2 +1,3 @@
-def add(a: int, b: int) -> int:
-    return a + b
+from lib._compose import greet
+
+__all__ = ["greet"]

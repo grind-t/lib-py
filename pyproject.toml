@@ -44,11 +44,36 @@ test = "pytest"
 test-unit = "pytest tests/unit"
 test-e2e = "pytest tests/e2e"
 build = "uv build"
+lint-imports = "lint-imports"
+check = ["lint", "typecheck", "lint-imports", "test"]
 
 [dependency-groups]
 dev = [
+    "import-linter",
     "poethepoet",
     "pytest",
     "ruff",
     "ty",
 ]
+
+# ---------- Architecture rules enforced by lint-imports ----------
+[tool.importlinter]
+root_package = "lib"
+include_external_packages = true
+
+[[tool.importlinter.contracts]]
+name = "Layers: dependencies point inward only"
+type = "layers"
+layers = [
+    "lib._compose",
+    "lib._adapters | lib._service",
+    "lib._ports",
+    "lib._core",
+]
+
+[[tool.importlinter.contracts]]
+name = "Core, ports and service do no I/O"
+type = "forbidden"
+source_modules = ["lib._core", "lib._ports", "lib._service"]
+# also add adapters' third-party dependencies here (httpx, etc.)
+forbidden_modules = ["os", "io", "pathlib", "socket", "subprocess"]
