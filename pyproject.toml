@@ -21,14 +21,20 @@ build-backend = "uv_build"
 module-name = "lib"
 
 [tool.ruff.lint]
+preview = true
+explicit-preview-rules = true  # preview rules only when selected explicitly
 select = [
     "E", "F", "I", "UP", "B", "SIM", "RUF", "PT", "N",
-    "C4", "PIE", "PERF", "FURB", "PTH", "T20", "ANN", "ASYNC", "DTZ",
+    "C4", "PIE", "PERF", "FURB", "PTH", "T20", "ANN", "ASYNC", "DTZ", "TID",
+    "PLC2701",
 ]
 ignore = ["RUF001"]  # allow Cyrillic in strings
 
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
 [tool.ruff.lint.per-file-ignores]
-"tests/**" = ["ANN"]
+"tests/**" = ["ANN", "PLC2701"]  # tests reach into private layers
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
