@@ -76,7 +76,7 @@ include_external_packages = true
 name = "Layers: dependencies point inward only"
 type = "layers"
 layers = [
-    "lib._wiring",
+    "lib._composition_root",
     "lib._adapters | lib._usecases",
     "lib._ports",
     "lib._core",
