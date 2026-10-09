@@ -59,7 +59,7 @@ check = ["lint", "typecheck", "test-unit"]
 
 [dependency-groups]
 dev = [
-    "grind-t-lint-rules>=0.1.0",
+    "grind-t-lint-rules>=0.2.0",
     "import-linter",
     "poethepoet",
     "pytest",
