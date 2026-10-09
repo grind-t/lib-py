@@ -99,11 +99,11 @@ dev = [
 
 [[package]]
 name = "grind-t-lint-rules"
-version = "0.2.0"
+version = "0.2.1"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/9e/ac/7cbdc80cb416306f6ea9cef9b61ed514140b13f69947de7cf0728083cafc/grind_t_lint_rules-0.2.0.tar.gz", hash = "sha256:efcd3b1e05234347dd519d76cbc7c73daccdc4074e30759b66799714eaea68d1", size = 11450, upload-time = "2026-10-09T19:42:06.582Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/de/b0/45c91cac6c09a441da46bb2cef11373e69a43b380a9e4cbdffbd1f07604c/grind_t_lint_rules-0.2.1.tar.gz", hash = "sha256:60c096a16c3396b156af8ea455809bde80f824d3470aa97e7b8d968f8db4a480", size = 11409, upload-time = "2026-10-09T21:36:41.935Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/7a/b8/37e374b54173a925836177022be866bbca4129f96e1d972fec83550218d7/grind_t_lint_rules-0.2.0-py3-none-any.whl", hash = "sha256:226419a258e11a7ff47297c20ec6649f34ee345866e6e5944df0cd8b16ae5cbf", size = 31708, upload-time = "2026-10-09T19:42:01.237Z" },
+    { url = "https://files.pythonhosted.org/packages/56/96/92a9b087c2fd0288e53f4fee8bab4710e2445bd1715259d5c96fed848f7d/grind_t_lint_rules-0.2.1-py3-none-any.whl", hash = "sha256:799ad3b7d4704edd39589f3e7c20e49fc163218f678c59c5334c6e324b71166a", size = 31782, upload-time = "2026-10-09T21:36:40.381Z" },
 ]
 
 [[package]]
