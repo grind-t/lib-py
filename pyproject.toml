@@ -51,8 +51,8 @@ lint = [
     { cmd = "lint-rules src" },
 ]
 typecheck = "ty check"
-test-unit = "pytest tests/core tests/usecases"
-test-integration = "pytest tests --ignore=tests/core --ignore=tests/usecases"
+test-unit = "pytest tests/core"
+test-integration = "pytest tests --ignore=tests/core"
 test = "pytest"
 build = "uv build"
 check = ["lint", "typecheck", "test-unit"]
@@ -73,11 +73,9 @@ root_package = "lib"
 include_external_packages = true
 
 [[tool.importlinter.contracts]]
-name = "Layers: dependencies point inward only"
+name = "Shell depends on core, never the reverse"
 type = "layers"
 layers = [
-    "lib._composition_root",
-    "lib._adapters | lib._usecases",
-    "lib._ports",
+    "lib._shell",
     "lib._core",
 ]
