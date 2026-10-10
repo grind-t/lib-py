@@ -52,7 +52,7 @@ lint = [
 ]
 typecheck = "ty check"
 test-unit = "pytest tests/core"
-test-integration = "pytest tests --ignore=tests/core"
+test-integration = "pytest tests/shell"
 test = "pytest"
 build = "uv build"
 check = ["lint", "typecheck", "test-unit"]
