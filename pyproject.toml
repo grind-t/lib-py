@@ -71,9 +71,11 @@ root_package = "lib"
 include_external_packages = true
 
 [[tool.importlinter.contracts]]
-name = "Shell depends on core, never the reverse"
+name = "Effects -> workflows -> computations -> entities"
 type = "layers"
 layers = [
-    "lib._shell",
-    "lib._core",
+    "lib._stateless_effects : lib._stateful_effects",
+    "lib._stateless_workflows : lib._stateful_workflows",
+    "lib._stateless_computations : lib._stateful_computations",
+    "lib._entities",
 ]
