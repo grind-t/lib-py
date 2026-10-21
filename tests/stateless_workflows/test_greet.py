@@ -1,4 +1,4 @@
-from lib._stateless_workflows.greeting import greet
+from lib._stateless_workflows.greet import greet
 
 
 def test_greet() -> None:

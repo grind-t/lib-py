@@ -1,6 +1,6 @@
 from collections.abc import Callable
 
-from lib._stateless_computations.greeting import format_greeting
+from lib._stateless_computations.format_greeting import format_greeting
 
 
 def greet(read_env: Callable[[str], str | None]) -> str:

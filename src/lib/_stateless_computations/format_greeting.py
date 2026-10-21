@@ -1,3 +1,3 @@
 def format_greeting(name: str) -> str:
-    """Pure function: the same input always gives the same output."""
+    """Format a greeting for ``name``."""
     return f"Hello, {name}!"
