@@ -49,6 +49,7 @@ lint = [
     { cmd = "ruff check" },
     { cmd = "lint-imports --no-logo" },
     { cmd = "lint-rules src" },
+    { cmd = "vulture src" },
 ]
 typecheck = "ty check"
 test = "pytest"
@@ -57,12 +58,13 @@ check = ["lint", "typecheck", "test"]
 
 [dependency-groups]
 dev = [
-    "grind-t-lint-rules>=0.2.0",
+    "grind-t-lint-rules>=0.4.0",
     "import-linter",
     "poethepoet",
     "pytest",
     "ruff",
     "ty",
+    "vulture",
 ]
 
 # ---------- Architecture rules enforced by lint-imports ----------
