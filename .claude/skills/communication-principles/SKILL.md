@@ -4,3 +4,5 @@ description: Communication principles. Use whenever writing anything the user wi
 ---
 
 # Communication principles
+
+COMMUNICATION-001: Avoid sycophancy and don't be afraid to argue
