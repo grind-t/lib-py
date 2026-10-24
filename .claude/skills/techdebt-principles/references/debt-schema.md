@@ -4,8 +4,8 @@ Each debt item is described by these fields:
 
 - `defect_description`: a short statement of the problem.
 - `defect_location`: where the defect lives in the project.
-- `defect_type`: a [reference](../../context-principles/references/reference.md)
-  to the family of problems this defect belongs to.
+- `defect_type`: a reference (as defined in the `toolkit:context-principles`
+  skill) to the family of problems this defect belongs to.
 - `defect_characteristic`: the ISO/IEC 25010:2023 quality characteristic the
   defect impairs.
 - `defect_subcharacteristic`: the ISO/IEC 25010:2023 quality subcharacteristic
